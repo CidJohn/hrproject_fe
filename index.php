@@ -1,15 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <?php include("./templates/partials/designFrame.php") ?>
-</head>
+use hrproject_fe\Controller\HomeController;
 
-<body>
-    <?php include __DIR__ . "./templates/pages/layout.php" ?>
-</body>
+include_once "./controllers/HomeController.php";
 
-</html>
+$routes = [];
+
+route('/', function () {
+    $homepage = new HomeController();
+    $homepage->index();
+});
+
+route('/contactus', function () {
+    $contactus = new HomeController();
+    $contactus->contactUs();
+});
+
+route('/about-us', function () {
+    echo "About Us";
+});
+
+route('/404', function () {
+    echo "Page not found";
+});
+
+function route(string $path, callable $callback)
+{
+    global $routes;
+    $routes[$path] = $callback;
+}
+
+run();
+
+function run()
+{
+    global $routes;
+    $uri = $_SERVER['REQUEST_URI'];
+    $found = false;
+    foreach ($routes as $path => $callback) {
+        if ($path !== $uri) continue;
+
+        $found = true;
+        $callback();
+        break; // Stop after finding the first matching route
+    }
+
+    if (!$found) {
+        $notFoundCallback = $routes['/404'];
+        $notFoundCallback();
+    }
+}

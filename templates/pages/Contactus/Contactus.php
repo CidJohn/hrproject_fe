@@ -11,12 +11,13 @@
 <body>
 
     <?php
-    $data;
+
     $designFramePath = __DIR__ . '/../../partials/designFrame.php';
     $navbarPath = __DIR__ . '/../Navbar/Navbar.php';
-    $herobannerPath = __DIR__ . '/Section/Herobanner/Herobanner.php';
+    $contactForm = __DIR__ . '/Section/ContactForm/ContactForm.php';
+
     include $navbarPath;
-    include $herobannerPath;
+    include $contactForm;
     include $designFramePath;
 
     ?>
