@@ -1,8 +1,10 @@
 <?php
 
+require_once './vendor/autoload.php';
+include_once "./controllers/HomeController.php";
+
 use hrproject_fe\Controller\HomeController;
 
-include_once "./controllers/HomeController.php";
 
 $routes = [];
 
