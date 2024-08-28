@@ -12,6 +12,7 @@ class HomeController
     {
         $welcome = new HomeModel();
         $data = $welcome->getData();
+        $username = $welcome->getUser();
         include __DIR__ . '/../templates/pages/Homepage/Homepage.php';
     }
     public function contactUs()
