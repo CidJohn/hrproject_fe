@@ -2,22 +2,24 @@
 
 namespace hrproject_fe\Model;
 
-use hrproject_fe\db\db_conn; // Correct namespace
+use testFunction;
 
-include "./includes/db.php";
+include "./includes/testFunction.php";
 
 class HomeModel
 {
-    private $db;
+    private $username;
 
-    public function __construct()
-    {
-        $database = new db_conn();
-        $this->db = $database->connect();
-    }
 
     public function getData()
     {
         return "Welcome to Human Resources Information System";
+    }
+
+    public function getUser()
+    {
+        $getData = new testFunction();
+        $this->username = $getData->getUser();
+        return $this->username;
     }
 }
