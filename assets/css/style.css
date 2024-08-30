@@ -1,0 +1,68 @@
+body {
+  background-color: #d2d4d6;
+}
+.login-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10%;
+}
+.login-form .form-group {
+  width: 60vh;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  justify-items: center;
+  border-radius: 20px;
+  -webkit-box-shadow: -11px 14px 5px 0px rgba(156, 156, 156, 1);
+  -moz-box-shadow: -11px 14px 5px 0px rgba(156, 156, 156, 1);
+  box-shadow: -11px 14px 5px 0px rgba(156, 156, 156, 1);
+}
+.login-form .form-group .form-control {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+}
+
+.form-group .btnSubmit {
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  font-weight: bolder;
+}
+
+.form-group .btnSubmit:hover {
+  padding: 10px;
+  border: 2px solid white;
+  border-radius: 10px;
+  background-color: #2f8ae4;
+  color: aliceblue;
+}
+
+.form-control label,
+input {
+  font-size: 14px;
+  font-weight: 600;
+}
+.form-control input {
+  padding: 5px;
+  border: 1px solid #838a90;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.form-control input:hover {
+  border: 1px solid #499de7;
+  border-radius: 5px;
+}
+
+.form-control input:focus {
+  border: 1px solid #499de7;
+  outline: none;
+  border-radius: 5px;
+}
+
+.login-form img {
+  width: 32px;
+}

@@ -17,6 +17,13 @@ class HomeController
     }
     public function contactUs()
     {
+        $welcome = new HomeModel();
+        $data = $welcome->getData();
+        $username = $welcome->getUser();
         include __DIR__ . '/../templates/pages/Contactus/Contactus.php';
+    }
+    public function notFound()
+    {
+        include __DIR__ . '/../templates/pages/NotFoundPage/NotFoundPage.php';
     }
 }
