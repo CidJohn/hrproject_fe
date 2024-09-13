@@ -1,6 +1,6 @@
 <?php
 
-namespace hrproject_fe\Model;
+namespace Model;
 
 use testFunction;
 

@@ -29,8 +29,6 @@ class db_conn
             );
 
             $this->conn = new PDO($dsn, $_ENV['DB_USER'], $_ENV['DB_PASS'], $options);
-
-            echo "<script>console.log('Database connected successfully.');</script>";
         } catch (PDOException $e) {
             echo 'Connection Error: ' . $e->getMessage();
         }
