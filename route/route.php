@@ -1,11 +1,11 @@
 <?php
 
-require_once './vendor/autoload.php';
+require './vendor/autoload.php';
 include_once "./controllers/HomeController.php";
 include_once './controllers/AuthController.php';
 
-use hrproject_fe\Controller\AuthController;
-use hrproject_fe\Controller\HomeController;
+use Controller\AuthController;
+use Controller\HomeController;
 
 
 $routes = [];
@@ -33,6 +33,7 @@ route('/signin', function () {
     $auth = new AuthController();
     $auth->signinAuth();
 });
+
 
 function route(string $path, callable $callback)
 {

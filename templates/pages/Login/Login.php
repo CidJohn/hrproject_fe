@@ -2,7 +2,7 @@
     <form action="" method="post">
 
         <div class="form-group">
-            <div class="flex  px-5  my  -5 justify-between">
+            <div class="flex  px-5  my-5 justify-between">
                 <div class="text-2xl font-bold ">Login Account</div>
 
                 <div class="flex gap-3">
@@ -24,13 +24,16 @@
                 <label for="Username">Username:</label>
                 <input type="text" name="username" id="username" placeholder="Enter Username" require />
             </div>
-            <div class="form-control">
-                <label for="Password">Password:</label>
-                <input type="password" name="password" id="password" placeholder="******" require />
-            </div>
-            <div class="px-5 py-1 flex">
-                <input type="checkbox" name="showPass" id="showPass" />
-                <label for="showPass" class="text-sm ">Show Password</label>
+            <div class="flex items-center">
+                <div class="form-control ">
+                    <label for="Password">Password:</label>
+                    <div class="flex gap-2 items-center">
+                        <input type="password" name="password" class="min-w-[25vw]" id="password" placeholder="******" require />
+                        <i class="fa-regular fa-eye eye-toggle hover:text-blue-500 p-1 rounded-md" id="togglePassword"></i>
+                    </div>
+
+                </div>
+
             </div>
             <div class="form-control mt-5 ">
                 <button type="submit" class="btnSubmit" name="submitLogin" id="submitLogin">Sign in</button>

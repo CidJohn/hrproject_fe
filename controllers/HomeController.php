@@ -1,8 +1,8 @@
 <?php
 
-namespace hrproject_fe\Controller;
+namespace Controller;
 
-use hrproject_fe\Model\HomeModel;
+use Model\HomeModel;
 
 include_once "./models/HomeModel.php";
 
