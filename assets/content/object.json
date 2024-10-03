@@ -1,0 +1,24 @@
+{
+  "cards": [
+    {
+      "title": "EE Record",
+      "imageURL": "Sample 1",
+      "path": "/"
+    },
+    {
+      "title": "Time Keeping",
+      "imageURL": "Sample 2",
+      "path": "/timeKeeping"
+    },
+    {
+      "title": "Leave Application",
+      "imageURL": "Sample 3",
+      "path": "/leaveApplication"
+    },
+    {
+      "title": "Overtime Application",
+      "imageURL": "Sample 4",
+      "path": "/overTimeApplication"
+    }
+  ]
+}

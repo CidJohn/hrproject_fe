@@ -7,16 +7,17 @@ include_once './controllers/AuthController.php';
 use Controller\AuthController;
 use Controller\HomeController;
 
-
+$jsonFilePath =  './assets/content/object.json';
 $routes = [];
 
-route('/', function () {
-    $homepage = new HomeController();
+
+route('/', function () use ($jsonFilePath) {
+    $homepage = new HomeController($jsonFilePath);
     $homepage->index();
 });
 
-route('/contactus', function () {
-    $contactus = new HomeController();
+route('/contactus', function () use ($jsonFilePath) {
+    $contactus = new HomeController($jsonFilePath);
     $contactus->contactUs();
 });
 
@@ -24,8 +25,8 @@ route('/about-us', function () {
     echo "About Us";
 });
 
-route('/404', function () {
-    $notfound = new HomeController();
+route('/404', function () use ($jsonFilePath) {
+    $notfound = new HomeController($jsonFilePath);
     $notfound->notFound();
 });
 
